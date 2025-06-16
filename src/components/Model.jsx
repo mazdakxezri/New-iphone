@@ -55,7 +55,7 @@ const Model = () => {
   return (
     <section className="common-padding">
       <div className="screen-max-width">
-        <h1 id="heading" className="section-heading">
+        <h1 id="heading" className="section-heading text-center">
           Take a closer look.
         </h1>
 
@@ -96,10 +96,10 @@ const Model = () => {
             </Canvas>
           </div>
 
-          <div className="mx-auto w-full">
-            <p className="text-sm font-light text-center mb-5">{model.title}</p>
-            <div className="flex-center">
-              <ul className="color-container">
+          <div className="mx-auto w-full px-4">
+            <p className="text-sm font-light text-center mb-5 max-sm:text-xs">{model.title}</p>
+            <div className="flex-center flex-col sm:flex-row gap-4">
+              <ul className="color-container flex-wrap justify-center">
                 {models.map((item, i) => (
                   <li
                     key={i}
@@ -110,11 +110,11 @@ const Model = () => {
                 ))}
               </ul>
 
-              <button className="size-btn-container">
+              <button className="size-btn-container max-sm:w-full">
                 {sizes.map(({ label, value }) => (
                   <span
                     key={label}
-                    className="size-btn"
+                    className="size-btn max-sm:flex-1"
                     style={{
                       backgroundColor: size === value ? "white" : "transparent",
                       color: size === value ? "black" : "white",
